@@ -38,21 +38,31 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align to the left */
+    margin-left: 20px; /* Adjust as needed */
+}
 
-/* Profile Image Styling */
 .profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    object-fit: cover; /* Ensures image fits within the circular frame */
-    display: block;
-    margin: 20px auto;
+    object-fit: cover; /* Ensures the image fits within the circle */
     transition: transform 0.3s ease-in-out;
 }
 
 .profile-photo:hover {
     transform: scale(1.05); /* Slight pop effect */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Adds spacing below the profile photo */
 }
 
 /* Responsive Design */
