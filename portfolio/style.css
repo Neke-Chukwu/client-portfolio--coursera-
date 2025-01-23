@@ -135,6 +135,25 @@ legend {
     transform: translateY(-5px);
 }
 
+/* Bounce effect on hover */
+.add-recommendation {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 15px;
+    background: #345574;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.add-recommendation:hover {
+    background: #6267a7;
+    transform: scale(1.1); /* Grows slightly on hover */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
