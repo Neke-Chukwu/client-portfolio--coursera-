@@ -65,6 +65,64 @@ nav ul li a:hover {
     margin-top: 10px; /* Adds spacing below the profile photo */
 }
 
+/* Style for the Skills and Projects sections */
+fieldset {
+    border: none;
+    border-radius: 15px; /* Rounded edges */
+    padding: 20px;
+    margin: 20px 0;
+    background: linear-gradient(to bottom, white, lightblue); /* Gradient effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Pop-up shadow effect */
+}
+
+/* Style for the legends (titles) */
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills and Projects Containers */
+.skills-container, .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+/* Skill Item */
+.skill {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Skill Icons */
+.skill img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Project Item */
+.project {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.project:hover {
+    transform: translateY(-5px);
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {
