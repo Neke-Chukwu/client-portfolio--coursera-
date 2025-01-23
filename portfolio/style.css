@@ -208,6 +208,9 @@ legend {
     cursor: pointer;
     font-size: 16px;
     transition: transform 0.3s ease-in-out;
+    max-width: 200px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .add-recommendation:hover {
