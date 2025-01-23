@@ -99,6 +99,15 @@ header {
     margin-top: 10px;
     letter-spacing: 1px;
 }
+/*bio*/
+.bio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0e282c;
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
 
 /* Fancy Underline Effect */
 .logo::after {
