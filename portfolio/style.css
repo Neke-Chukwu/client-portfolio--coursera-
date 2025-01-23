@@ -65,6 +65,10 @@ header {
     display: block;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Profile Section */
 .profile-container {
     display: flex;
