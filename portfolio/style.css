@@ -188,6 +188,14 @@ legend {
     transform: translateY(-5px);
 }
 
+
+/* recommendation section */
+.recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 /* Button with Bounce Effect */
 .add-recommendation {
     display: block;
