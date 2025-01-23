@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Modern and readable font */
+    font-family: 'Poppins', sans-serif; 
     margin: 0;
     padding: 0;
     background-color: #8caece48;
@@ -82,7 +82,7 @@ header {
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: 5px solid #345574; /* Adds a stylish border */
+    border: 5px solid #345574; /* Border color */
 }
 
 .profile-photo:hover {
@@ -95,7 +95,7 @@ header {
     font-size: 28px;
     font-weight: bold;
     color: #345574;
-    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-family: 'Playfair Display', serif;
     margin-top: 10px;
     letter-spacing: 1px;
 }
@@ -104,7 +104,7 @@ header {
     font-size: 20px;
     font-weight: bold;
     color: #0e282c;
-    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-family: 'Playfair Display', serif;
     margin-top: 5px;
     letter-spacing: 1px;
 }
@@ -196,6 +196,7 @@ legend {
     gap: 20px;
     justify-content: center;
 }
+
 /* Button with Bounce Effect */
 .add-recommendation {
     display: block;
@@ -211,12 +212,32 @@ legend {
     max-width: 200px;
     width: 100%;
     box-sizing: border-box;
+    clear: both; /* Ensures the button is below the recommendations */
+}
+
+/* Responsive Design for larger screens */
+@media (min-width: 769px) {
+    .add-recommendation {
+        max-width: 200px;
+        max-height: 70px;
+        padding: 10px 15px; /* Ensure padding is consistent */
+    }
 }
 
 .add-recommendation:hover {
     background: #6267a7;
     transform: scale(1.1);
 }
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -243,5 +264,12 @@ legend {
 
     .logo {
         font-size: 22px;
+    }
+}
+/* Responsive Design for Recommendations */
+@media (max-width: 768px) {
+    .recommendations {
+        flex-direction: column;
+        align-items: center;
     }
 }
