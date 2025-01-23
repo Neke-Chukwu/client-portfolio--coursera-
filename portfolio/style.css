@@ -103,15 +103,7 @@ html {
     margin-top: 10px;
     letter-spacing: 1px;
 }
-/*bio*/
-.bio {
-    font-size: 20px;
-    font-weight: bold;
-    color: #0e282c;
-    font-family: 'Playfair Display', serif;
-    margin-top: 5px;
-    letter-spacing: 1px;
-}
+
 
 /* Fancy Underline Effect */
 .logo::after {
@@ -122,6 +114,15 @@ html {
     background: #345574;
     margin: 5px auto 0;
     border-radius: 2px;
+}
+/*bio*/
+.bio {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0e282c;
+    font-family: 'Playfair Display', serif;
+    margin-top: 5px;
+    letter-spacing: 1px;
 }
 
 /* Skills & Projects Sections */
