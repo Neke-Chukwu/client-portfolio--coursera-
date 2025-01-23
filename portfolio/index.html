@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neke's portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -71,16 +72,28 @@
     </section>
     
     <!-- Recommendations Section -->
-    <section id="recommendations">
-        <h2>Recommendations</h2>
-        <ul id="recommendation-list">
-            <li>Recommendation 1</li>
-            <li>Recommendation 2</li>
-            <li>Recommendation 3</li>
-        </ul>
-        <button onclick="addRecommendation()">Add Recommendation</button>
+    <section class="content-box">
+        <fieldset class="recommendations">
+            <legend>Recommendations</legend>
+            <div class="recommendations-container">
+                <div class="recommendation">
+                    <h3>John Doe</h3>
+                    <p>"Neke is a highly skilled developer. His work on my project was outstanding!"</p>
+                </div>
+                <div class="recommendation">
+                    <h3>Jane Smith</h3>
+                    <p>"Great problem-solving skills and excellent coding abilities. Highly recommended!"</p>
+                </div>
+                <div class="recommendation">
+                    <h3>Michael Brown</h3>
+                    <p>"Neke's web development expertise is impressive. His designs are top-notch!"</p>
+                </div>
+            </div>
+            <button onclick="addRecommendation();" class="add-recommendation">Add Recommendation</button>
+        </fieldset>
     </section>
+    
 
-    <script src="script.js"></script>
+    
 </body>
 </html>
