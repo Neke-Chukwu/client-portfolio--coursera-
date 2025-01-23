@@ -1,10 +1,13 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Modern and readable font */
     margin: 0;
     padding: 0;
     background-color: #8caece48;
 }
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
 
 /* Style the header */
 header {
@@ -14,6 +17,7 @@ header {
     padding: 15px;
     background: #333;
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Style the menu button */
@@ -27,25 +31,12 @@ header {
     border-radius: 5px;
 }
 
-/* Style the menu content */
-/* Dropdown Button */
-.menu-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Dropdown Container */
+/* Dropdown Styles */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -56,112 +47,139 @@ header {
     z-index: 1;
 }
 
-/* Menu Items */
 .dropdown-content a {
     color: black;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
     transition: all 0.3s ease-in-out;
+    font-weight: 500;
 }
 
-/* Highlight and Pop Effect */
 .dropdown-content a:hover {
     background-color: lightblue;
     transform: scale(1.1);
 }
 
-/* Show the dropdown when hovering over the button */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-
+/* Profile Section */
 .profile-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align to the left */
-    margin-left: 20px; /* Adjust as needed */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
 }
 
+/* Profile Picture */
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    object-fit: cover; /* Ensures the image fits within the circle */
-    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 5px solid #345574; /* Adds a stylish border */
 }
 
 .profile-photo:hover {
-    transform: scale(1.05); /* Slight pop effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Profile Name */
 .logo {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    color: #333;
-    margin-top: 10px; /* Adds spacing below the profile photo */
+    color: #345574;
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    margin-top: 10px;
+    letter-spacing: 1px;
 }
 
-/* Style for the Skills and Projects sections */
+/* Fancy Underline Effect */
+.logo::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #345574;
+    margin: 5px auto 0;
+    border-radius: 2px;
+}
+
+/* Skills & Projects Sections */
 fieldset {
     border: none;
-    border-radius: 15px; /* Rounded edges */
+    border-radius: 15px;
     padding: 20px;
     margin: 20px 0;
-    background: linear-gradient(to bottom, white, lightblue); /* Gradient effect */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Pop-up shadow effect */
+    background: linear-gradient(to bottom, white, lightblue);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the legends (titles) */
+/* Section Titles */
 legend {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #333;
-    padding: 5px 10px;
+    padding: 5px 15px;
     background: white;
     border-radius: 10px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Skills and Projects Containers */
+/* Skills & Projects Layout */
 .skills-container, .projects-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-around;
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Skill Item */
+/* Individual Skill */
 .skill {
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.05);
 }
 
 /* Skill Icons */
 .skill img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    margin-bottom: 8px;
 }
 
 /* Project Item */
 .project {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+    text-align: center;
 }
 
-/* Hover Effect */
 .project:hover {
     transform: translateY(-5px);
 }
 
-/* Bounce effect on hover */
+/* Button with Bounce Effect */
 .add-recommendation {
     display: block;
     margin: 20px auto 0;
@@ -177,9 +195,8 @@ legend {
 
 .add-recommendation:hover {
     background: #6267a7;
-    transform: scale(1.1); /* Grows slightly on hover */
+    transform: scale(1.1);
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -188,18 +205,9 @@ legend {
         align-items: center;
     }
 
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
     .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 }
 
@@ -208,12 +216,12 @@ legend {
         font-size: 14px;
     }
 
-    nav ul li a {
-        font-size: 16px;
+    .profile-photo {
+        width: 120px;
+        height: 120px;
     }
 
-    .profile-photo {
-        width: 100px;
-        height: 100px;
+    .logo {
+        font-size: 22px;
     }
 }
