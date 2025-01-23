@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neke's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     
     <header id="header">
         <h1>Neke's Portfolio</h1>
-        <div class="dropdown">
+        <nav class="dropdown">
             <button class="menu-btn">☰ Menu</button>
             <div class="dropdown-content">
                 <a href="#about" class="scroll-link">About</a>
@@ -19,7 +18,7 @@
                 <a href="#projects" class="scroll-link">Projects</a>
                 <a href="#recommendations" class="scroll-link">Recommendations</a>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- About Me Section -->
@@ -29,53 +28,51 @@
             <h1 class="logo">Neke Chukwu</h1>
             <p class="bio">A passionate web developer with expertise in front-end and back-end development. Skilled in creating responsive, user-friendly, and scalable applications.</p>
         </div>
-        
     </section>
 
-<section class="content-box" id="skills">
     <!-- Skills Section -->
-    <fieldset class="skills">
-        <legend>Skills</legend>
-        <div class="skills-container">
-            <div class="skill">
-                <img src="images/html.png" alt="HTML">
-                <div class="skill-description">
-                    <strong>HTML</strong>
-                    <p>Structuring modern web applications</p>
+    <section class="content-box" id="skills">
+        <fieldset class="skills">
+            <legend>Skills</legend>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="images/html.png" alt="HTML Logo">
+                    <div class="skill-description">
+                        <strong>HTML</strong>
+                        <p>Structuring modern web applications</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="images/css.png" alt="CSS Logo">
+                    <div class="skill-description">
+                        <strong>CSS</strong>
+                        <p>Styling for responsive and interactive UI</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <img src="images/js.png" alt="JavaScript Logo">
+                    <div class="skill-description">
+                        <strong>JavaScript</strong>
+                        <p>Creating interactive web applications</p>
+                    </div>
                 </div>
             </div>
-            <div class="skill">
-                <img src="images/css.png" alt="CSS">
-                <div class="skill-description">
-                    <strong>CSS</strong>
-                    <p>Styling for responsive and interactive UI</p>
-                </div>
-            </div>
-            <div class="skill">
-                <img src="images/js.png" alt="JavaScript">
-                <div class="skill-description">
-                    <strong>JavaScript</strong>
-                    <p>Creating interactive web applications</p>
-                </div>
-            </div>
-        </div>
-    </fieldset>
-</section>
+        </fieldset>
 
         <!-- Projects Section -->
         <fieldset class="projects" id="projects">
             <legend>Projects</legend>
             <div class="projects-container">
                 <div class="project">
-                    <h3 class="project">Calculator App</h3>
+                    <h3>Calculator App</h3>
                     <p>A simple and functional calculator built using JavaScript, allowing users to perform basic arithmetic operations with a clean and interactive UI.</p>
                 </div>
                 <div class="project">
-                    <h3 class="project">Metric Converter</h3>
+                    <h3>Metric Converter</h3>
                     <p>A web application that converts different metric units (length, weight, temperature) using JavaScript, providing real-time conversions.</p>
                 </div>
                 <div class="project">
-                    <h3 class="project">Client Portfolio Website</h3>
+                    <h3>Client Portfolio Website</h3>
                     <p>A professional portfolio website template for clients, designed with HTML, CSS, and JavaScript, ensuring a fully responsive and visually appealing layout.</p>
                 </div>
             </div>
@@ -83,26 +80,52 @@
     </section>
     
     <!-- Recommendations Section -->
-    <section class="content-box" id="recommendations">
-        <fieldset class="recommendations">
-            <legend>Recommendations</legend>
-            <div class="recommendations-container">
-                <div class="recommendation">
-                    <h3>Chris Lynda</h3>
-                    <p>"Neke is a highly skilled developer. His work on my project was outstanding!"</p>
-                </div>
-                <div class="recommendation">
-                    <h3>Ohia Prince</h3>
-                    <p>"Great problem-solving skills and excellent coding abilities. Highly recommended!"</p>
-                </div>
-                <div class="recommendation">
-                    <h3>Destiny Jachike</h3>
-                    <p>"Neke's web development expertise is impressive. His designs are top-notch!"</p>
-                </div>
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+        <div class="all_recommendations" id="all_recommendations">
+            <div class="recommendation">
+                <h3>Chris Lynda</h3>
+                <p>"Neke is a highly skilled developer. His work on my project was outstanding!"</p>
             </div>
-            <button onclick="addRecommendation();" class="add-recommendation">Add Recommendation</button>
-        </fieldset>
+            <div class="recommendation">
+                <h3>Ohia Prince</h3>
+                <p>"Great problem-solving skills and excellent coding abilities. Highly recommended!"</p>
+            </div>
+            <div class="recommendation">
+                <h3>Destiny Jachike</h3>
+                <p>"Neke's web development expertise is impressive. His designs are top-notch!"</p>
+            </div>
+        </div>
+
+        <button id="showRecommendationForm" class="add-recommendation">Add Recommendation</button>
     </section>
-    
+  
+    <!-- Recommendation Form -->
+    <section id="contact" style="display: none;">
+        <div class="flex_center">
+            <fieldset>
+                <legend class="introduction">Recommend Neke</legend>
+                <label for="recommendationName">Name (Optional)</label>
+                <input type="text" id="recommendationName" placeholder="Your Name"> 
+                <br/>
+                <label for="new_recommendation">Message</label>
+                <textarea id="new_recommendation" cols="50" rows="5" placeholder="Your Message"></textarea>
+                <div class="flex_center">
+                    <button id="submitRecommendation">Submit</button>
+                </div>
+            </fieldset>
+        </div>
+
+        <!-- Popup Confirmation -->
+        <div class="popup" id="popup">
+            <img src="images/checkmark-outline.svg" alt="Checkmark">
+            <h3>Thank you for your recommendation!</h3>
+            <button onclick="showPopup(false)">Ok</button>
+        </div>
+    </section>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
 </body>
 </html>

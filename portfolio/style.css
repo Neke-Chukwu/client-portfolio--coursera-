@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif; 
@@ -6,10 +9,11 @@ body {
     background-color: #8caece48;
 }
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
-/* Style the header */
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -17,10 +21,8 @@ header {
     padding: 15px;
     background: #333;
     color: white;
-    font-family: 'Poppins', sans-serif;
 }
 
-/* Style the menu button */
 .menu-btn {
     background: #444;
     color: white;
@@ -65,10 +67,6 @@ header {
     display: block;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Profile Section */
 .profile-container {
     display: flex;
@@ -79,14 +77,13 @@ html {
     margin-top: 30px;
 }
 
-/* Profile Picture */
 .profile-photo {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    border: 5px solid #345574; /* Border color */
+    border: 5px solid #345574;
 }
 
 .profile-photo:hover {
@@ -94,7 +91,6 @@ html {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Profile Name */
 .logo {
     font-size: 28px;
     font-weight: bold;
@@ -104,8 +100,6 @@ html {
     letter-spacing: 1px;
 }
 
-
-/* Fancy Underline Effect */
 .logo::after {
     content: "";
     display: block;
@@ -115,7 +109,7 @@ html {
     margin: 5px auto 0;
     border-radius: 2px;
 }
-/*bio*/
+
 .bio {
     font-size: 20px;
     font-weight: bold;
@@ -135,7 +129,6 @@ fieldset {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Section Titles */
 legend {
     font-size: 1.7rem;
     font-weight: bold;
@@ -149,7 +142,6 @@ legend {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Skills & Projects Layout */
 .skills-container, .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -157,7 +149,6 @@ legend {
     justify-content: center;
 }
 
-/* Individual Skill */
 .skill {
     text-align: center;
     padding: 15px;
@@ -170,7 +161,6 @@ legend {
     transform: scale(1.05);
 }
 
-/* Skill Icons */
 .skill img {
     width: 60px;
     height: 60px;
@@ -178,7 +168,6 @@ legend {
     margin-bottom: 8px;
 }
 
-/* Project Item */
 .project {
     background: white;
     padding: 20px;
@@ -193,16 +182,39 @@ legend {
     transform: translateY(-5px);
 }
 
-
-/* recommendation section */
-.recommendations {
+/* Recommendations Section */
+.all_recommendations {
     display: flex;
+    justify-content: center; 
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    padding: 20px;
+    gap: 20px; 
 }
 
-/* Button with Bounce Effect */
+.recommendation {
+    font-style: italic;
+    text-align: left;
+    width: 21.875rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    border: 1px solid gray;
+    font-size: 18px;
+    min-height: 100px; 
+    box-sizing: border-box; 
+}
+
+.recommendation h3 {
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.recommendation p {
+    margin: 0;
+}
+
 .add-recommendation {
     display: block;
     margin: 20px auto;
@@ -217,16 +229,7 @@ legend {
     max-width: 200px;
     width: 100%;
     box-sizing: border-box;
-    clear: both; /* Ensures the button is below the recommendations */
-}
-
-/* Responsive Design for larger screens */
-@media (min-width: 769px) {
-    .add-recommendation {
-        max-width: 200px;
-        max-height: 70px;
-        padding: 10px 15px; /* Ensure padding is consistent */
-    }
+    clear: both;
 }
 
 .add-recommendation:hover {
@@ -234,47 +237,12 @@ legend {
     transform: scale(1.1);
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-photo {
-        width: 140px;
-        height: 140px;
-    }
+#contact {
+    display: none;
+    margin-top: 20px;
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .logo {
-        font-size: 22px;
-    }
-}
-/* Responsive Design for Recommendations */
-@media (max-width: 768px) {
-    .recommendations {
-        flex-direction: column;
-        align-items: center;
-    }
+.flex_center {
+    display: flex;
+    justify-content: center;
 }
