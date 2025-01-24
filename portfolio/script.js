@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
         showPopup(false);
     });
 });
+function showPopup(show) {
+    const popup = document.getElementById('popup');
+    if (show) {
+    popup.style.visibility = 'visible';
+    } 
+    else {
+    popup.style.visibility = 'hidden';
+    }
+}
 
 function addRecommendation() {
     const name = document.getElementById('recommendationName').value.trim();
@@ -40,13 +49,10 @@ function addRecommendation() {
     document.getElementById('recommendationName').value = '';
     document.getElementById('new_recommendation').value = '';
     document.getElementById('contact').style.display = 'none';
+    document.getElementById('showRecommendationForm').style.display = 'block';
 
     // Show thank-you popup
-    document.getElementById('popup').querySelector('h3').textContent = 'Thank you for your recommendation!';
+    document.getElementById('popup').querySelector('h3').textContent = 'Thanks for the recommendation';
     showPopup(true);
-}
+    }
 
-function showPopup(show) {
-    const popup = document.getElementById('popup');
-    popup.classList.toggle('show', show);
-}

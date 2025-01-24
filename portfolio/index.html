@@ -99,7 +99,7 @@
 
         <button id="showRecommendationForm" class="add-recommendation">Add Recommendation</button>
     </section>
-  
+
     <!-- Recommendation Form -->
     <section id="contact" style="display: none;">
         <div class="flex_center">
@@ -114,15 +114,13 @@
                     <button id="submitRecommendation">Submit</button>
                 </div>
             </fieldset>
-        </div>
-
-        <!-- Popup Confirmation -->
-        <div class="popup" id="popup">
-            <img src="images/checkmark-outline.svg" alt="Checkmark">
-            <h3>Thank you for your recommendation!</h3>
-            <button onclick="showPopup(false)">Ok</button>
-        </div>
+        </div> 
     </section>
+    <div id="popup" class="popup" >
+        <img src="images/checkmark.svg" alt="popup icon">
+        <h3>Thanks for the recommendation</h3>
+        <button onclick="showPopup(false)" class="close-popup">Ok</button>
+    </div>
 
     <!-- JavaScript File -->
     <script src="script.js"></script>
